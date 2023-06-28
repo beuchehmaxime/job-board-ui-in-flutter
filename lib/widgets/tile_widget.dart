@@ -2,8 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TileWidgets extends StatelessWidget {
+  final IconData iconsUse;
+  final String position;
+  final String company;
+  final String jobDetails;
+  final String site;
+  final String positionType;
+
   const TileWidgets({
     super.key,
+    required this.iconsUse,
+    required this.position,
+    required this.company,
+    required this.jobDetails,
+    required this.site,
+    required this.positionType,
   });
 
   @override
@@ -32,16 +45,21 @@ class TileWidgets extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                      const Icon(
-                        Icons.facebook,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                      Icon(
+                        iconsUse,
                         color: Colors.blue,
                         size: 50,
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "UI/UX Designer",
+                            position,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
                             style: GoogleFonts.robotoCondensed(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
@@ -49,9 +67,10 @@ class TileWidgets extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "Meta Cooperation",
+                            company, textAlign: TextAlign.start,
                             style: GoogleFonts.roboto(
-                                fontSize: 17, color: Colors.grey.shade600),
+                                fontSize: 17, color: Colors.grey.shade600
+                                ),
                           )
                         ],
                       )
@@ -75,7 +94,9 @@ class TileWidgets extends StatelessWidget {
                     ),
                     child: Center(
                         child: Text(
-                      "Full Time",
+                      positionType,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                       style: GoogleFonts.roboto(
                           fontSize: 14,
                           color: Colors.black45,
@@ -91,7 +112,9 @@ class TileWidgets extends StatelessWidget {
                     ),
                     child: Center(
                         child: Text(
-                      "Remote",
+                      site,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                       style: GoogleFonts.roboto(
                           fontSize: 14,
                           color: Colors.black45,
@@ -108,6 +131,8 @@ class TileWidgets extends StatelessWidget {
                     child: Center(
                         child: Text(
                       "1 Year Exp",
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                       style: GoogleFonts.roboto(
                           fontSize: 14,
                           color: Colors.black45,
@@ -119,7 +144,9 @@ class TileWidgets extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 10.0),
                 child: Text(
-                  "Lorem ipsum is a dummy text used in writing website that are nice. You can easily get it from the ...",
+                  jobDetails,
+                  overflow: TextOverflow.ellipsis,
+                            maxLines: 3,
                   style: GoogleFonts.roboto(
                     fontSize: 17,
                     color: Colors.grey.shade600,
