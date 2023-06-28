@@ -28,7 +28,7 @@ class JobScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 236, 228, 228),
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        title: const Text("HOME"),
       ),
       body: Column(
         children: [
