@@ -22,7 +22,7 @@ class TileWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 18.0, left: 15, right: 15),
+      padding: const EdgeInsets.only(bottom: 18.0, left: 15, right: 15, top: 10),
       child: Container(        
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),

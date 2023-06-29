@@ -28,13 +28,20 @@ class JobScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 236, 228, 228),
       appBar: AppBar(
-        title: const Text("HOME"),
+        leading: IconButton(icon: const Icon(Icons.person_rounded), onPressed: (){},),
+        title: const Text("Home"),
+        actions: [
+          //IconButton(icon: const Icon(Icons.shopping_bag), onPressed: (){},),
+          IconButton(icon: const Icon(Icons.search), onPressed: (){},),
+        ],
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 17, 115, 64),
       ),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(
-                left: 20, right: 35.0, top: 25, bottom: 15),
+                left: 20, right: 35.0, top: 25, bottom: 10),
             child: Text(
               "Let's Find Your Dream Job",
               style: GoogleFonts.jost(
@@ -46,11 +53,11 @@ class JobScreen extends StatelessWidget {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 8.0, bottom: 15, left: 15, right: 15),
+            padding: EdgeInsets.only(top: 8.0, bottom: 2, left: 15, right: 15),
             child: SearchFormWidget(),
           ),
           const Padding(
-            padding: EdgeInsets.only(top: 15.0, left: 15, right: 15),
+            padding: EdgeInsets.only(top: 8.0, left: 15, right: 15),
             child: RecommendedText(),
           ),
           Expanded(

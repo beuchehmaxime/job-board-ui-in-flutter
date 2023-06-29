@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_directory/screens/jobs_screen.dart';
+import 'package:new_directory/screens/register_screen.dart';
 
 
 class HomeButtonWidget extends StatelessWidget {
@@ -15,7 +15,7 @@ class HomeButtonWidget extends StatelessWidget {
       onPressed: () {
         Navigator.push(context, 
           MaterialPageRoute(builder: (context){
-            return JobScreen();
+            return const RegisterScreenWidget();
           }),
         );
       },

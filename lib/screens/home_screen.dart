@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_directory/screens/login_screen.dart';
 
 import '../widgets/home_button_widget.dart';
 import '../widgets/home_text_widget.dart';
@@ -50,7 +51,13 @@ class MyHome extends StatelessWidget {
             TextButton(
               //icon: const Icon(Icons.add_shopping_cart),
               //label: Text("Shop now".toUpperCase()),
-              onPressed: null,
+              onPressed: (){
+                Navigator.push(context, 
+                  MaterialPageRoute(builder: (context){
+                    return const LoginScreenWidget();
+                  }),
+                );
+              },
               style: TextButton.styleFrom(
                 textStyle: const TextStyle(
                   fontSize: 20,

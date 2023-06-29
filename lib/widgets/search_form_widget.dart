@@ -23,6 +23,7 @@ class SearchFormWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(40),
           borderSide: BorderSide.none,
         ),
+        contentPadding: const EdgeInsets.symmetric(vertical: 10.0),
       ),
     );
   }
